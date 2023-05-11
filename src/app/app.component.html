@@ -1,1 +1,35 @@
-Works
+<h1>Angular Router App</h1>
+<!-- Ссылки для использования маршрутов -->
+<nav>
+  <ul>
+    <!--
+      routerLinkActive добавляет написанный класс активной ссылке
+     -->
+    <li><a routerLink="/first-component" routerLinkActive="active" ariaCurrentWhenActive="page">First Component</a></li>
+    <li><a routerLink="/second-component" routerLinkActive="active" ariaCurrentWhenActive="page">Second Component</a></li>
+    <li><a routerLink="/anyadress" routerLinkActive="active" ariaCurrentWhenActive="page">Not existing page</a></li>
+  </ul>
+</nav>
+
+
+<!-- Элемент для рендера -->
+<router-outlet></router-outlet>
+
+
+
+<!-- Скроет вторичный контент -->
+<button (click)="hide()">Hide secondary</button>
+<button (click)="show()">Show secondary</button>
+<br>
+<a [routerLink]="[{outlets: {secondary: null}}]"
+>Hide secondary</a
+>
+
+<!--
+  Добавят в строку запроса следующий текст в скобках: (secondary:secondary-path)
+-->
+<a [routerLink]="[{outlets: {secondary: 'secondary-path'}}]"
+  >Show secondary</a
+>
+
+<router-outlet name="secondary"></router-outlet>

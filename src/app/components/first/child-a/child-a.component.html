@@ -1,0 +1,20 @@
+<p>child-a works!</p>
+
+<!--
+  Если в routerLink="/second-component" не написать /, то будет учтен активный url и к нему 
+  припишится second-component.
+
+  Если указать, то маршрут будет взят начальный
+-->
+<!-- <li><a routerLink="/second-component">Go to second</a></li> -->
+
+
+<!--
+  В шаблоне также можно указать параметры маршрута. Слеующий маршрут такой: /second-component/3:
+-->
+<!-- <li><a [routerLink]="['/second-component', 3]">Go to second</a></li> -->
+
+
+
+<!-- Параметры строки запроса имеют сл запись:  (вид: second-component?id=3)           -->
+<li><a [routerLink]="['/second-component']" [queryParams]="{id: 3}">Go to second</a></li>
