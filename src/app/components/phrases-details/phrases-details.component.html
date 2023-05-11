@@ -1,0 +1,24 @@
+<!-- <div>
+  {{phrase?.value}}
+</div> -->
+
+<div *ngIf="phrase">
+  <h3>Phrase Details</h3>
+
+  <div>
+    {{ phrase.id }}
+  </div>
+  <div>
+    {{ phrase.value }}
+  </div>
+  <div>
+    {{ phrase.language }}
+  </div>
+
+  <br />
+  <div>
+    <button (click)="goToPhrasesList()" type="button">
+      Go to Phrases List
+    </button>
+  </div>
+</div>
