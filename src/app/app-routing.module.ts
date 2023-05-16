@@ -7,8 +7,11 @@ import { ChildAComponent } from './components/first/child-a/child-a.component';
 import { ChildBComponent } from './components/first/child-b/child-b.component';
 import { SecondaryRoutComponent } from './components/secondary-rout/secondary-rout.component';
 
+// !!! Важный момент по роутингу содержится в index.html
+
+
 const routes: Routes = [
-  // Тут указываем сведения по марщрутам
+  // Тут указываем сведения по маршрутам
 
   {
     path: 'first-component', component: FirstComponent,
