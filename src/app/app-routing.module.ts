@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
+import { AboutGuard } from './about-guard';
+import { ExitAboutGuard } from './exit-about-guard';
 
 const routes: Routes = [
   {
@@ -11,6 +13,8 @@ const routes: Routes = [
   {
     path: 'about',
     component: AboutComponent,
+    canActivate: [AboutGuard],
+    canDeactivate: [ExitAboutGuard],
   }
 
 

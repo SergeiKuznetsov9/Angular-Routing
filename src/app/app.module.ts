@@ -5,6 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
+import { AboutGuard } from './about-guard';
+import { ExitAboutGuard } from './exit-about-guard';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,7 @@ import { AboutComponent } from './components/about/about.component';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [AboutGuard, ExitAboutGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
