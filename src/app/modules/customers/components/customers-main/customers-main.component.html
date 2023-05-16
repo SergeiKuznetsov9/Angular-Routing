@@ -1,0 +1,11 @@
+<h2>Customers</h2>
+<button (click)="goByRoute(1)">Go to first</button>
+<button (click)="goByRoute2(2)">Go to second</button>
+<button (click)="goByRoute2(3)">Go to third</button>
+<button (click)="goByRoute2(4)">Go to fourth</button>
+
+<!-- Из шаблона все можно передать также как и из контрола -->
+<a [routerLink]="['/customers', 'customer', 5]" [queryParams]="{id: 3} " [fragment]="'address'"
+  >Profile</a
+>
+<router-outlet></router-outlet>
